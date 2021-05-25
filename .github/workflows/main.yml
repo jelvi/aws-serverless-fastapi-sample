@@ -86,7 +86,7 @@ jobs:
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          aws-region: eu-west-1
 
       - name: Deploy new Lambda
         run: aws lambda update-function-code --function-name jelvifastapi --s3-bucket jelvifastapi --s3-key api.zip
